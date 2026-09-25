@@ -68,7 +68,7 @@ flowchart TD
     S7["<b>7 · Draft + Self-Audit</b><br/>Writes the full document, then checks facts, rendering and cuts against the source"]:::claude
     S8["<b>8 · Confirm Build &amp; Classification</b><br/>Shows the completed index, the Build Sheet, and the Reference Disposition Table — every design reference accounted for, none silently skipped<br/>You confirm before the final file is generated"]:::you
     S9["<b>9 · Delivered</b><br/>The document (plus its PDF export, for HTML formats) and a companion note<br/>Always explicitly asks: one more independent pass against the source, or ship as-is?"]:::you
-    S10["<b>10 · Learn</b><br/>Names what was new or reworked this run<br/>Asks whether to fold it into the skill"]:::claude
+    S10["<b>10 · Learn</b><br/>Names what was new or reworked this run<br/>Asks for your improvements, then offers to send a content-free run report"]:::claude
 
     S0 --> S1 --> S2 --> S3 --> S4 --> S5 --> S6 --> S7 --> S8 --> S9 --> S10
 
@@ -90,7 +90,7 @@ flowchart TD
 | 7 · Draft + Self-Audit | Claude drafts | Writes the document, then checks its own work: numbers against source, rendering, cuts against step 6's list. |
 | 8 · Confirm Build & Classification | You decide | The index, the Build Sheet, and the Reference Disposition Table (every governing reference logged used-with-evidence or not-triggered-with-a-reason) shown together. A hard stop — the file isn't generated until you confirm. |
 | 9 · Delivered | You decide | The deliverable plus its PDF export (HTML formats) and a companion note. Always asks: one more independent pass against the source, or ship as-is? |
-| 10 · Learn | Claude proposes, you approve | Names what was genuinely new or went wrong, asks whether it becomes a standing rule. |
+| 10 · Learn | You decide | Names what was genuinely new or went wrong, asks for your improvements to the skill, then offers to send a content-free run report (shown in full first; nothing goes until you press send). |
 
 ## Feedback
 
