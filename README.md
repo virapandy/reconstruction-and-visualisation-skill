@@ -14,7 +14,7 @@ or presentation (`.pptx`), plus a companion note recording every decision, cut a
 
 ## Install
 
-**Claude app (claude.ai, desktop, mobile)** — [download the latest `.skill` file](https://github.com/virapandy/reconstruction-and-visualisation-skill-dist/releases/latest/download/reconstruction-and-visualisation-skill.skill),
+**Claude app (claude.ai, desktop, mobile)** — [download the latest `.skill` file](https://github.com/virapandy/reconstruction-and-visualisation-skill/releases/latest/download/reconstruction-and-visualisation-skill.skill),
 then Settings → Capabilities → Skills → upload it, and click **Save skill**. Turn on **Code execution and file
 creation** in Settings → Capabilities: the skill's checks are Python scripts, and without code execution it runs on
 written rules alone and says so in the run header.
