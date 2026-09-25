@@ -3,7 +3,7 @@
 A [Claude Skill](https://support.claude.com/en/articles/12512180-using-skills-in-claude) that turns source
 material (a messy doc, a data dump, an old report or deck) into a new document shaped by **who will read it and
 what they need to do with it**: a real narrative arc, and a chart, table or plain paragraph chosen for what each
-piece of content actually is, rather than reformatting.
+piece of content actually is, rather than reformatting. And safeguards in place to reduce hallucination and overreach possibilities
 
 It works as one continuous conversation, not a pipeline. It asks a fixed set of intake questions, proposes two real
 story arcs for you to choose between, shows you a plan and a cut list before drafting, audits its own draft against
