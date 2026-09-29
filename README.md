@@ -65,6 +65,42 @@ newer release is published here.
 - **Tells you when it is out of date.** At the start of a job it checks the latest release here once and, if you are
   behind, shows one line with the download link. It never updates itself and never blocks the job.
 
+## Sample outputs
+
+Three real runs in claude.ai chat (skill v1.7.0, Claude Opus 5.5), one per output format, each from a single source
+file and a one-line request. They are shown as built, with one change: the names of places, people, organisations
+and businesses in the sources are replaced with pseudonyms (GP A–E, Buyer A, Trader B). Figures are as in the sources.
+
+**Digital report** — a camp-by-camp programme write-up, rebuilt for programme leadership before a strategy review.
+The skill turned "the camp model works" into twelve testable components and showed which ones the evidence supports.
+
+| Opening | Evidence matrix and timeline | Unit chart and stage ladder |
+|---|---|---|
+| ![Digital report opening page](samples/digital-report-1-opening.png) | ![Evidence matrix](samples/digital-report-2-evidence-matrix.png) | ![Unit chart and ladder](samples/digital-report-3-unit-chart-and-ladder.png) |
+
+On a phone the same report reflows: the matrix becomes a list per component and the timeline runs down the page.
+
+![Digital report at phone width](samples/digital-report-4-phone.png)
+
+**Print report** — a spreadsheet the requester called survey data. The skill found it was a projection model of one
+average household, re-scoped the report with the requester, rebuilt the model's arithmetic, and found an improvement
+the model lists but never applies. Four A4 pages for a district team's quarterly meeting:
+
+![Print report, all four pages](samples/print-report-all-pages.png)
+
+| Page 1 | Page 3 |
+|---|---|
+| ![Print report page 1](samples/print-report-page-1.png) | ![Print report page 3](samples/print-report-page-3.png) |
+
+**Presentation (Claude Slides)** — value-chain insights covering three of eight actors, for a funder meeting. Every
+main slide is one claim and one exhibit; the ask is left as a marked placeholder for the requester to fill.
+
+![All twelve slides](samples/deck-all-slides.png)
+
+| A range chart | A unit chart |
+|---|---|
+| ![Slide 2](samples/deck-slide-02.png) | ![Slide 7](samples/deck-slide-07.png) |
+
 ## The flow
 
 Gold = waiting on you. Green = Claude doing the work. Steps 1, 3, 5, 6, 8
