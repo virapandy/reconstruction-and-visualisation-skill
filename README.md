@@ -43,6 +43,13 @@ newer release is published here.
   storyline (the hero points read alone, as the reader, with no visuals) before any visual is chosen. A deck is planned
   as a slide-by-slide storyboard, shown as a grey-box light table, in which every main slide is a claim title plus one
   exhibit; a text-only slide is refused, and the built deck is checked against the confirmed storyboard.
+- **Three ways to work.** Keep the source's structure and words and only add visuals (Keep-as-is), let the skill find
+  the best shape (Restructure), or fit the content to sections someone else set: a funder's template, a tender's order,
+  a reviewer's comments (Mandated structure). It asks when a source looks like a template, and a section the source
+  cannot fill is disclosed, never filled.
+- **Purpose picks the story.** Eleven purposes (decide, approve an ask, respond to challenge, report status, plan and
+  more) each name the story arcs to try first, including arcs for answering reviewers or defending a proposal, and
+  for a strategy or plan. Choosing a different arc is allowed, with the reason recorded.
 - **One working Doc, outputs on request.** All the content lives in a Claude Doc you can comment on and edit. Each
   output is generated from it when you ask; come back later, change the Doc, and regenerate only what changed.
 - **It looks at its own output.** Every build is rendered and looked at, page by page or at phone and laptop widths,
