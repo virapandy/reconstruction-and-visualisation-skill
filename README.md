@@ -31,8 +31,9 @@ unzip reconstruction-and-visualisation-skill.skill -d ~/.claude/skills/reconstru
 Then describe what you want ("restructure this report for the board", "turn this dump into a deck") or invoke it by
 name. Only the latest version is published here.
 
-**Updating** — download the file again and re-upload it: the new version replaces the installed one, and earlier
-versions stay in the skill's version history. The skill itself tells you, in one line at the start of a job, when a
+**Updating** — download the file again. In the Claude app, open the installed skill's **⋯** menu and choose
+**Replace** (a fresh upload alongside it does not replace it), then start a **new chat**: a chat that was already open
+keeps the version it started with. Earlier versions stay in the skill's version history. The skill itself tells you, in one line at the start of a job, when a
 newer release is published here.
 
 ## What makes it different
@@ -69,8 +70,32 @@ newer release is published here.
 - **Works inside claude.ai chat.** Runtime scripts are Python standard library only (3.9+ syntax). The one network
   request is the optional version check: an ordinary HTTPS request to github.com that sends nothing about your job
   (GitHub sees your IP address, as with any page visit). With no network it is skipped silently.
+- **The delivery question needs your answer.** Before anything is delivered you are asked, with options; a "continue"
+  typed only to resume Claude after its tool limit is never taken as your yes.
+- **Fewer overstatements, checked by scripts.** It warns when a document states what "most people think" without a
+  source that measured it, and when a chart's title claims a number or a multiple ("four times") its own data does not
+  support. "May", "suggests" and conditions are kept when text is squeezed into tables and decision rows.
+- **Checks that see the output.** Blank PDF pages, blank slides, cut-off page captures and charts without a source line
+  are flagged before delivery; phone-width navigation is checked by rendering, not by reading the code.
+- **An independent read.** At delivery it can write a prompt for a fresh chat that checks the document against its
+  source cold, including five "would I publish this?" questions: story, insight, visuals, craft and trust.
+- **Your own icons survive updates.** An icon set drawn for one job is handed to you as a file (`my-icons.svg`) you keep
+  and attach to later chats; it is cleaned of anything but icon shapes before use, and an update cannot overwrite it.
+- **Plain-English option.** For instructions or readers of English as a second language: one instruction per sentence,
+  short sentences and paragraphs, and no qualifier dropped.
+- **Templates you must follow.** A funder template's own label that a check flags (a sign-off "Prepared by:") is
+  excused with a stated reason instead of blocking the job.
 - **Tells you when it is out of date.** At the start of a job it checks the latest release here once and, if you are
   behind, shows one line with the download link. It never updates itself and never blocks the job.
+
+## Tested on real chat runs
+
+The first scored round (six jobs in claude.ai chat, one per output type and mode, on openly licensed sources) was judged
+by fresh-context reviewers against the sources: no number errors in about 835 checked claims, nothing invented, every
+source heading accounted for, and 5 to 6 of 6 key questions answerable from each document. Four of six passed the
+fidelity gate outright; the two that did not each had one overstated sentence, and visual polish was the weakest area.
+Every finding became a fix with a test in v1.8.1–v1.8.3, and the gates added since were replayed against that round's
+work logs: each fires only on the run that had the defect.
 
 ## Sample outputs
 
