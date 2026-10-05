@@ -54,10 +54,15 @@ newer release is published here.
 - **One working Doc, outputs on request.** All the content lives in a Claude Doc you can comment on and edit. Each
   output is generated from it when you ask; come back later, change the Doc, and regenerate only what changed.
 - **It looks at its own output.** Every build is rendered and looked at, page by page or at phone and laptop widths,
-  before you see it. The look checks claims as well as layout: a rendered grid can show that a distinction the prose
-  made is not in the evidence.
+  before you see it. The rendered page is measured first (charts that failed to draw, pages that overflow, missing
+  navigation, text too small), then compared with a reference page for its format. The look checks claims as well as
+  layout: a rendered grid can show that a distinction the prose made is not in the evidence.
 - **One chart kit for every medium.** A shared registry of chart and diagram shapes, each drawn from one data spec by
   the report kit and the Slides kit alike, with one number format and layouts that hold on a phone.
+- **Ready-made report parts and reference pages.** Figure blocks, callouts, key findings, numbered recommendations,
+  cards, an evidence matrix, contents, and print covers and back pages, re-made from the ONS, GOV.UK and US Web Design
+  System patterns. Twenty openly licensed reference pages (World Bank, Our World in Data, ONS) show what good looks
+  like, each with what not to copy.
 - **Enforced by scripts, not only by instructions.** A work log refuses out-of-order steps, fabricated quotations,
   unread references (a build is refused until its references are read in full) and false "done" claims; a checker
   inspects the built file. Refusals teach: each one says what to do instead.
@@ -94,7 +99,7 @@ The first scored round (six jobs in claude.ai chat, one per output type and mode
 by fresh-context reviewers against the sources: no number errors in about 835 checked claims, nothing invented, every
 source heading accounted for, and 5 to 6 of 6 key questions answerable from each document. Four of six passed the
 fidelity gate outright; the two that did not each had one overstated sentence, and visual polish was the weakest area.
-Every finding became a fix with a test in v1.8.1–v1.8.3, and the gates added since were replayed against that round's
+Every finding became a fix with a test in v1.8.1–v1.8.3 (v1.9.0 then targets visual quality, the weakest area), and the gates added since were replayed against that round's
 work logs: each fires only on the run that had the defect.
 
 ## Sample outputs
@@ -199,4 +204,6 @@ is built by a script, and is shown to you in full before anything is sent; nothi
 notice and licence text stay with copies. Icons are from [Tabler Icons](https://tabler.io/icons) (MIT) and
 [Health Icons](https://healthicons.org) (MIT); their notices are inside the package at
 `assets/icons/THIRD-PARTY-NOTICES.md`. The `livestock-market` icons are original to this package. The kit typefaces,
-Newsreader and IBM Plex Sans Condensed, are under the SIL Open Font License (`assets/kits/fonts/OFL.txt`).
+Newsreader and IBM Plex Sans Condensed, are under the SIL Open Font License (`assets/kits/fonts/OFL.txt`). The report
+parts' pattern sources are credited in `assets/kits/CREDITS.md`. The reference pages are openly licensed (CC BY 3.0 IGO,
+CC BY 4.0, Open Government Licence v3.0), with sources and attribution in `assets/exemplars/CREDITS.md`.
