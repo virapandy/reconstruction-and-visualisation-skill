@@ -24,11 +24,24 @@ just ask Claude directly.
 
 ### How it works
 
-1. **You tell it about your reader:** who they are, what they already know, and what you need them to do.
-2. **You pick the story.** It reads everything and offers two ways to tell it.
-3. **You approve the plan:** each section, its main point and its picture, and what will be left out.
-4. **It builds and checks.** It writes the document, looks at every page, and checks it against your source. Then it
-   offers a second, independent check before you share it.
+Here's what a typical job looks like once you ask for it:
+
+> **You:** "Turn this report into a short deck for our board." *(and attach the report)*
+>
+> **Claude** asks a few questions, one at a time: who's on the board, what they already know, what you need them to
+> decide, and how visual the deck should be.
+>
+> **Claude** reads the whole report and offers two ways to tell the story. **You** pick one.
+>
+> **Claude** shows the plan: each slide, its main point and its picture, plus what will be left out. **You** approve
+> it or ask for changes.
+>
+> **Claude** builds the deck, looks at every slide, and checks the numbers and claims against your report.
+>
+> **Claude** hands you the deck and a short note on what it kept, left out or wasn't sure about. Then it asks: "Do
+> you want a second, independent check before you share this?"
+
+You're asked before anything important is decided, and nothing is built until you've approved the plan.
 
 **What you get:** a Word report, a web page (with a PDF copy), a print-ready PDF, or a slide deck you can download as
 PowerPoint or PDF. Each one comes with a short note saying what was kept, what was left out, and anything it wasn't
@@ -88,18 +101,21 @@ version is out.
 - **Nothing about your work is sent anywhere else.** The only outside request is a quick check on GitHub for a newer
   version, and it sends nothing about your job. Feedback is optional, and covered under [Feedback](#feedback).
 
-## Tested on real jobs
+## Tested again and again
 
-We ran six real jobs in Claude chat, one for each type of output, using openly licensed sources. Fresh reviewers
-checked each document against its source:
+The skill has been through **seven rounds of testing** on real jobs in Claude chat. The rounds covered every type of
+output and every way of working, and the sources ranged from short reports to long, messy, real-world documents.
 
-- **Numbers:** about 835 claims checked, with no number errors.
-- **Invented content:** none.
-- **Source headings:** every one accounted for.
-- **Key questions:** 5 or 6 out of 6 could be answered from each document.
+In each round, reviewers who had never seen the work checked every document against its source. They looked for
+wrong numbers, invented content, claims stronger than the evidence, missing sections, and pages that didn't look
+right. Every problem they found was fixed, and each fix got its own automated test, so the same mistake can't quietly
+come back.
 
-Four of the six passed the accuracy check outright. The other two each had one sentence that overstated its source,
-and visual polish was the weakest area. Every problem found was fixed and given a test in later versions.
+Before every release, about 900 automated tests run. More than 500 of them switch off one safety check at a time, to
+prove that the tests would notice if that check ever stopped working. A release is refused unless every one of those
+is caught.
+
+**From the first round:** about 835 claims were checked, with no number errors and nothing invented.
 
 ## Sample outputs
 
