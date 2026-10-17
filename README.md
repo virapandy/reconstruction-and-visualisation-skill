@@ -2,6 +2,12 @@
 
 **Don't just reformat the material. Reconstruct the story, make it visual, and make it easy for your reader to understand.**
 
+![One article rebuilt twice: as a slide deck for supporters and as a web pre-read for a board](samples/before-after.png)
+
+<sub>One public article, rebuilt twice by the skill for two different readers, shown as delivered. Source: Max Roser,
+"Extreme poverty: How far have we come, and how far do we still have to go?", Our World in Data (2023), CC BY 4.0.
+The figures are as of that article; the World Bank has since updated its data.</sub>
+
 A [Claude Skill](https://support.claude.com/en/articles/12512180-using-skills-in-claude) that helps turn messy
 documents, data, long reports and old slides into clear reports and presentations, built around what your reader
 needs to understand or do.
@@ -12,6 +18,13 @@ says.
 **[Install the skill](https://github.com/virapandy/reconstruction-and-visualisation-skill#install)** ·
 **[See sample outputs](https://github.com/virapandy/reconstruction-and-visualisation-skill#sample-outputs)** ·
 **[Download the latest version](https://github.com/virapandy/reconstruction-and-visualisation-skill/releases/latest/download/reconstruction-and-visualisation-skill.skill)**
+
+### See it in 30 seconds
+
+The same article as above: first the source, then the deck for supporters, then the board's pre-read on a laptop
+and a phone.
+
+![The source article, then the 11-slide deck, then the web pre-read on laptop and phone](samples/demo.gif)
 
 ### When to use it
 
@@ -54,28 +67,53 @@ PowerPoint template, and it fills that in rather than starting from scratch. Eit
 colours, fonts and layout before anything is built.
 
 **Who it's for:** anyone turning material into something a particular reader will use. No technical skills needed.
-It works in the Claude app (web, desktop and mobile) and in Claude Code.
+It works in the Claude app (web, desktop and mobile), in Cowork and in Claude Code.
 
 ## Install
 
-**In the Claude app**
+It's one file, the same for every place you use Claude:
+**[download the skill file](https://github.com/virapandy/reconstruction-and-visualisation-skill/releases/latest/download/reconstruction-and-visualisation-skill.skill)**.
+Then follow the steps for where you use Claude.
 
-1. [Download the skill file](https://github.com/virapandy/reconstruction-and-visualisation-skill/releases/latest/download/reconstruction-and-visualisation-skill.skill).
-2. Go to **Settings → Capabilities → Skills**, upload it, and click **Save skill**.
-3. In **Settings → Capabilities**, turn on **Code execution and file creation**. The skill uses this to check its own
-   work. Without it, the skill still runs, but with fewer checks, and it tells you so.
+### In the Claude app (web, desktop or mobile)
 
-**In Claude Code**, unzip the file into your skills folder:
+1. Go to **Settings → Capabilities → Skills**, upload the file, and click **Save skill**.
+2. In **Settings → Capabilities**, turn on **Code execution and file creation**. The skill uses it to check its own
+   work: it measures pages, checks numbers against your source and looks at what it built. Without it, the skill
+   still runs, but with fewer checks, and it tells you so.
+
+### In Cowork
+
+Skills you add in **Settings → Capabilities → Skills** are available in Cowork too, so the steps above install it
+there as well. Then start a Cowork task and attach your source, or point the task at the folder that holds it.
+
+One limit for now: Cowork's workspace has no web browser, and the skill uses one to look at web pages, print pages
+and slides. **Word reports get every check in Cowork.** For the other three formats, use the Claude app or Claude
+Code if you can. In Cowork they get fewer checks.
+
+### In Claude Code
+
+Unzip the file into your skills folder:
 
 ```bash
 mkdir -p ~/.claude/skills/reconstruction-and-visualisation-skill
-unzip reconstruction-and-visualisation-skill.skill -d ~/.claude/skills/reconstruction-and-visualisation-skill
 ```
 
-**Then just ask.** For example: "restructure this report for the board".
+```bash
+unzip -o reconstruction-and-visualisation-skill.skill -d ~/.claude/skills/reconstruction-and-visualisation-skill
+```
 
-**Updating:** download the file again. In the Claude app, open the installed skill's **⋯** menu and choose
-**Replace**, then start a new chat. The skill mentions it at the start of a job when a newer version is out.
+It needs Python 3, which macOS and most Linux systems already have.
+
+**Then just ask.** For example: "restructure this report for the board", with the report attached. You don't need
+to name the skill. Claude picks it up from what you ask for.
+
+### Updating
+
+The skill mentions it at the start of a job when a newer version is out. To update, download the file again, then:
+
+- **Claude app and Cowork:** open the installed skill's **⋯** menu, choose **Replace**, and start a new chat or task.
+- **Claude Code:** run the `unzip -o` command above again. It overwrites the old copy.
 
 ## What makes it different
 
@@ -98,12 +136,20 @@ hadn't seen the work compared each document with its source, looking at:
 - **Clarity:** whether the story and the visuals help the reader understand
 - **Format:** whether it works as a report, web page, print page or slide deck
 
+In the latest judged round (v1.11.0, five runs), the reviewers checked 658 claims and found no wrong numbers and
+no invented content. The slips they did find were summary lines worded more strongly than the source. That kind of
+slip is what the separate reviewer step is there to catch.
+
 Problems that were found have been fixed and given automated tests, so they're less likely to come back. It isn't
 perfect, though: it's still worth reading the result before you share it.
 
 ## Sample outputs
 
-These are three runs from an earlier version (v1.7.0), shown as built. Names of places, people and organisations are
+**One article, two readers (v1.11.0):** the example at the top of this page. A public Our World in Data article
+became an 11-slide deck for supporters and a web pre-read for a board. Each slide is in
+[`samples/owid-deck/`](samples/owid-deck/).
+
+The three runs below are from an earlier version (v1.7.0), shown as built. Names of places, people and organisations are
 replaced, and the figures are as in the sources.
 
 **Web report:** a programme write-up, rebuilt for leaders before a strategy review.
