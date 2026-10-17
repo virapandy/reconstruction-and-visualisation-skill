@@ -48,6 +48,11 @@ checks its work, and all of that takes time. For everyday notes, just ask Claude
 
 Whichever you choose, you also get a short note on what was kept, what was left out, and anything uncertain.
 
+**You can bring your own look.** If you have a house style, brand guidelines or an earlier document to match, tell it
+when it asks, and it will follow them instead of its own defaults. For slides, you can share your organisation's
+PowerPoint template, and it fills that in rather than starting from scratch. Either way, you see a preview of the
+colours, fonts and layout before anything is built.
+
 **Who it's for:** anyone turning material into something a particular reader will use. No technical skills needed.
 It works in the Claude app (web, desktop and mobile) and in Claude Code.
 
