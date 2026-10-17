@@ -25,8 +25,8 @@ checks its work, and all of that takes time. For everyday notes, just ask Claude
 
 > **You:** "Turn this report into a short deck for our board." *(and attach the report)*
 >
-> **Claude** asks a few questions, one at a time: who the readers are, what they already know, and what you need
-> from them.
+> **Claude** asks a few questions, one at a time: who the readers are, what they already know, what you need from
+> them, and **which of the four formats you want** (see below).
 >
 > **Claude** offers two ways to tell the story. **You** pick one.
 >
@@ -37,8 +37,16 @@ checks its work, and all of that takes time. For everyday notes, just ask Claude
 > **Claude** has the deck checked by a separate reviewer, fixes what it can, and hands it over with a short note on
 > what was kept, left out or uncertain.
 
-**What you get:** a Word report, a web page (with a PDF copy), a print-ready PDF, or a slide deck you can download as
-PowerPoint or PDF.
+**You choose the format.** There are four options, and you pick one at the start:
+
+| Format | What you get | Good for |
+|---|---|---|
+| **Word report** | A `.docx` file you can edit | Reports that others will edit or comment on |
+| **Web report** | A web page, plus a PDF copy | Reading on screen, including on a phone |
+| **Print report** | Magazine-style pages as a PDF | Printing, or handing out at a meeting |
+| **Slide deck** | Slides you can download as PowerPoint or PDF | Presenting |
+
+Whichever you choose, you also get a short note on what was kept, what was left out, and anything uncertain.
 
 **Who it's for:** anyone turning material into something a particular reader will use. No technical skills needed.
 It works in the Claude app (web, desktop and mobile) and in Claude Code.
