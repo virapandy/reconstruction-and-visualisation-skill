@@ -1,5 +1,7 @@
 # Reconstruction and Visualisation Skill
 
+Don't just reformat the material. Reconstruct the story, make it visual and optimise for the reader's comprehension
+
 A [Claude Skill](https://support.claude.com/en/articles/12512180-using-skills-in-claude) that turns source
 material (a messy doc, a data dump, an old report or deck) into a new document shaped by **who will read it and
 what they need to do with it**: a real narrative arc, and a chart, table or plain paragraph chosen for what each
