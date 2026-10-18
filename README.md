@@ -26,6 +26,14 @@ and a phone.
 
 ![The source article, then the 11-slide deck, then the web pre-read on laptop and phone](samples/demo.gif)
 
+### Why it exists
+
+This started as a personal project. I needed to turn long, messy material into documents that a particular reader
+would actually read and use, and asking Claude to "make this into a deck" wasn't getting me there, so I built a skill
+to do it more carefully. A few people tried it, and their early feedback was encouraging. I'm sharing it more widely
+now to hear from more people: what works, what doesn't, and what you'd change. See [Feedback](#feedback) for how to
+reach me.
+
 ### When to use it
 
 It's best for the **final version** of something that matters, like a report for a board or funder, slides for an
@@ -75,25 +83,36 @@ It's one file, the same for every place you use Claude:
 **[download the skill file](https://github.com/virapandy/reconstruction-and-visualisation-skill/releases/latest/download/reconstruction-and-visualisation-skill.skill)**.
 Then follow the steps for where you use Claude.
 
+**Which plans:** skills work on every Claude plan, including Free. A full job is long, though (usually 45–75
+minutes, about half of it Claude working), so a Pro plan or above works best. On Free, you may hit your usage limit
+part way through. Claude Slides and Claude Docs are also paid features, so on Free the deck comes as a web page
+instead.
+
 ### In the Claude app (web, desktop or mobile)
 
-1. Go to **Settings → Capabilities → Skills**, upload the file, and click **Save skill**.
-2. In **Settings → Capabilities**, turn on **Code execution and file creation**. The skill uses it to check its own
-   work: it measures pages, checks numbers against your source and looks at what it built. Without it, the skill
-   still runs, but with fewer checks, and it tells you so.
+1. In **Settings → Capabilities**, turn on **Code execution and file creation**. Skills need it to run. The skill
+   also uses it to check its own work: it measures pages, checks numbers against your source and looks at what it
+   built.
+2. Go to **Customize → Skills**, click **+**, then **Create skill → Upload a skill**, and choose the file.
+
+On a Team or Enterprise plan, your organisation's owner needs to have skills and code execution switched on. They may
+also have turned off uploading your own skills.
 
 ### In Cowork
 
-Skills you add in **Settings → Capabilities → Skills** are available in Cowork too, so the steps above install it
-there as well. Then start a Cowork task and attach your source, or point the task at the folder that holds it.
+Cowork uses the same skills as the rest of your Claude account, so the steps above install it there too. Then
+start a task and attach your source, or point the task at the folder that holds it. Cowork needs a paid plan.
 
-One limit for now: Cowork's workspace has no web browser, and the skill uses one to look at web pages, print pages
-and slides. **Word reports get every check in Cowork.** For the other three formats, use the Claude app or Claude
-Code if you can. In Cowork they get fewer checks.
+One limit for now: on the desktop app, Cowork's workspace has no web browser, and the skill uses one to look at web
+pages, print pages and slides. **Word reports get every check in Cowork.** For the other three formats, use the
+Claude app or Claude Code if you can. In Cowork they get fewer checks.
 
 ### In Claude Code
 
-Unzip the file into your skills folder:
+If you sign in to Claude Code with your Claude account, there's nothing more to do: skills you've added in the
+Claude app load in Claude Code too (version 2.1.273 or later). Run `/skills` to check that it's listed.
+
+If you use Claude Code with an API key, unzip the file into your skills folder instead:
 
 ```bash
 mkdir -p ~/.claude/skills/reconstruction-and-visualisation-skill
@@ -112,8 +131,10 @@ to name the skill. Claude picks it up from what you ask for.
 
 The skill mentions it at the start of a job when a newer version is out. To update, download the file again, then:
 
-- **Claude app and Cowork:** open the installed skill's **⋯** menu, choose **Replace**, and start a new chat or task.
-- **Claude Code:** run the `unzip -o` command above again. It overwrites the old copy.
+- **Claude app, Cowork, and Claude Code signed in with your account:** in **Customize → Skills**, open the skill's
+  **⋯** menu. Choose **Replace** if it's offered. If not, choose **Delete**, then upload the new file. Start a new
+  chat or task afterwards.
+- **Claude Code with an API key:** run the `unzip -o` command above again. It overwrites the old copy.
 
 ## What makes it different
 
