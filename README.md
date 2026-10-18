@@ -30,7 +30,8 @@ and a phone.
 
 This started as a personal project. I needed to turn long, messy material into documents that a particular reader
 would actually read and use, and asking Claude to "make this into a deck" wasn't getting me there, so I built a skill
-to do it more carefully. A few people tried it, and their early feedback was encouraging. I'm sharing it more widely
+to do it more carefully. I already had a Claude subscription, and a skill let me use it without paying for another
+tool. A few people tried it, and their early feedback was encouraging. I'm sharing it more widely
 now to hear from more people: what works, what doesn't, and what you'd change. See [Feedback](#feedback) for how to
 reach me.
 
@@ -41,6 +42,10 @@ important meeting, or anything read outside your team.
 
 For quick notes or rough internal drafts, it's probably too much. It asks questions, waits for your go-ahead and
 checks its work, and all of that takes time. For everyday notes, just ask Claude directly.
+
+If you need a polished deck in a few minutes, a dedicated presentation tool will be faster and has more design
+options. This skill is slower on purpose. It agrees the story and what gets cut with you, then checks what it built
+against your source.
 
 ### How it works
 
@@ -76,6 +81,9 @@ colours, fonts and layout before anything is built.
 
 **Who it's for:** anyone turning material into something a particular reader will use. No technical skills needed.
 It works in the Claude app (web, desktop and mobile), in Cowork and in Claude Code.
+
+**What it costs:** nothing beyond your Claude plan. The skill is free and open source (MIT), and it runs on the Claude
+subscription you already have, with no other tool, account or sign-up. Your documents stay in your own Claude account.
 
 ## Install
 
