@@ -41,7 +41,8 @@ It's best for the **final version** of something that matters, like a report for
 important meeting, or anything read outside your team.
 
 For quick notes or rough internal drafts, it's probably too much. It asks questions, waits for your go-ahead and
-checks its work, and all of that takes time. For everyday notes, just ask Claude directly.
+checks its work, and all of that takes time. For everyday notes, just ask Claude directly. If you bring it a short,
+low-stakes source, it will say so and suggest that; you can still go ahead.
 
 If you need a polished deck in a few minutes, a dedicated presentation tool will be faster and has more design
 options. This skill is slower on purpose. It agrees the story and what gets cut with you, then checks what it built
@@ -60,8 +61,9 @@ against your source.
 >
 > **Claude** builds the deck, looks at each slide, and checks the numbers against your report.
 >
-> **Claude** has the deck checked by a separate reviewer, fixes what it can, and hands it over with a short note on
-> what was kept, left out or uncertain.
+> **Claude** offers to have the deck checked by a separate reviewer and recommends how thorough that check should
+> be. **You** choose. Claude fixes what the reviewer finds, asks you before a fix would change a point you approved,
+> and hands it over with a short note on what was kept, left out or uncertain.
 
 **You choose the format.** There are four options, and you pick one at the start:
 
@@ -80,7 +82,8 @@ PowerPoint template, and it fills that in rather than starting from scratch. Eit
 colours, fonts and layout before anything is built.
 
 **Who it's for:** anyone turning material into something a particular reader will use. No technical skills needed.
-It works in the Claude app (web, desktop and mobile), in Cowork and in Claude Code.
+It works in the Claude app (web, desktop and mobile), in Cowork and in Claude Code, and tells you at the start which
+version is running and what that place can and cannot check.
 
 **What it costs:** nothing beyond your Claude plan. The skill is free and open source (MIT), and it runs on the Claude
 subscription you already have, with no other tool, account or sign-up. Your documents stay in your own Claude account.
@@ -151,8 +154,11 @@ The skill mentions it at the start of a job when a newer version is out. To upda
 - **It works with your structure, too.** It can keep your structure and words, find a new shape, or fill in a set
   template. If your source can't fill a section, it says so.
 - **It checks its own work.** It looks at every page it builds and checks numbers and quotes against your source.
-- **It always gets a second check.** Before delivery, a separate reviewer that sees only your source and the finished
-  document looks for claims stronger than the evidence. You can decline it, but the skill always asks.
+- **It offers a second check.** Before delivery, a separate reviewer that sees only your source and the finished
+  document looks for claims stronger than the evidence. The skill always asks, recommends a full or a quick check from
+  what is at stake, and says plainly what went unchecked if you decline.
+- **Your approved points stay put.** If a fix after review would change something you approved (the main message,
+  a step in the story), the skill asks you first. A paper you will decide from says what its source cannot tell you.
 - **It's open about its limits.** It says which checks are enforced and which still depend on Claude's judgement.
 
 ## Tested on real jobs
@@ -165,9 +171,16 @@ hadn't seen the work compared each document with its source, looking at:
 - **Clarity:** whether the story and the visuals help the reader understand
 - **Format:** whether it works as a report, web page, print page or slide deck
 
-In the latest judged round (v1.11.0, five runs), the reviewers checked 658 claims and found no wrong numbers and
-no invented content. The slips they did find were summary lines worded more strongly than the source. That kind of
-slip is what the separate reviewer step is there to catch.
+In the v1.11.0 round (five runs), the reviewers checked 658 claims and found no wrong numbers and no invented
+content. The slips they did find were summary lines worded more strongly than the source. That kind of slip is what
+the separate reviewer step is there to catch.
+
+For v1.13.0, the same board pre-read job was run in the Claude app, Claude Code and Cowork, and the result was compared
+with the v1.11.0 version by reviewers who did not know which was which, including three AI models from other providers.
+They rated the two about equal: the v1.13.0 report read as the better-written one, the v1.11.0 report as slightly more
+careful about what the source cannot say. The few slips found were again wording stronger than the source, mostly
+small. v1.13.0's own gains are in staying faithful to the source, behaving the same way wherever you run it, and
+explaining each step to someone using it for the first time.
 
 Problems that were found have been fixed and given automated tests, so they're less likely to come back. It isn't
 perfect, though: it's still worth reading the result before you share it.
