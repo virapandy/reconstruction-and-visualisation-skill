@@ -184,6 +184,8 @@ explaining each step to someone using it for the first time.
 
 For v1.14.0, the same job was run again in the Claude app and Claude Code and scored blind alongside the earlier versions. The Claude app report scored joint highest (42 of 44, level with v1.11.0), and the Claude Code report scored above the v1.13.0 Claude Code runs. This version adds a read-through from your reader's point of view, followed by a re-check against the source, and checks that each number stays about the right thing and that names come from the source or your brief. Compared with three published reports of their kind, the outputs use the same techniques but still talk about their source more than those do; that is what is being worked on next.
 
+For v1.15.0, the job was run again in the Claude app, and a new job (a funder brief in Word) in Claude Code with a deliberately messy requester, who answered several things at once. The second run asked 11 questions before the plan and none twice. Judged by the skill's own rule, nothing stated more firmly than the source, the v1.15 report had no overstatements and an editor score level with v1.14. This version asks fewer questions, checks that every fix from the independent check reaches the document, and rewrites a paper that keeps narrating its source.
+
 Problems that were found have been fixed and given automated tests, so they're less likely to come back. It isn't
 perfect, though: it's still worth reading the result before you share it.
 
