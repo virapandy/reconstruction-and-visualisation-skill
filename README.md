@@ -182,6 +182,8 @@ careful about what the source cannot say. The few slips found were again wording
 small. v1.13.0's own gains are in staying faithful to the source, behaving the same way wherever you run it, and
 explaining each step to someone using it for the first time.
 
+For v1.14.0, the same job was run again in the Claude app and Claude Code and scored blind alongside the earlier versions. The Claude app report scored joint highest (42 of 44, level with v1.11.0), and the Claude Code report scored above the v1.13.0 Claude Code runs. This version adds a read-through from your reader's point of view, followed by a re-check against the source, and checks that each number stays about the right thing and that names come from the source or your brief. Compared with three published reports of their kind, the outputs use the same techniques but still talk about their source more than those do; that is what is being worked on next.
+
 Problems that were found have been fixed and given automated tests, so they're less likely to come back. It isn't
 perfect, though: it's still worth reading the result before you share it.
 
