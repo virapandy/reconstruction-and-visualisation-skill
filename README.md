@@ -186,6 +186,8 @@ For v1.14.0, the same job was run again in the Claude app and Claude Code and sc
 
 For v1.15.0, the job was run again in the Claude app, and a new job (a funder brief in Word) in Claude Code with a deliberately messy requester, who answered several things at once. The second run asked 11 questions before the plan and none twice. Judged by the skill's own rule, nothing stated more firmly than the source, the v1.15 report had no overstatements and an editor score level with v1.14. This version asks fewer questions, checks that every fix from the independent check reaches the document, and rewrites a paper that keeps narrating its source.
 
+For v1.16.0, four small jobs that keep the source's wording (two print reports, a web page and a deck) were run in the Claude app with v1.15 and v1.16 and judged blind. On jobs this small there was no measured gain in how well each section's layout fits its reasoning, and v1.16's pages were preferred in 9 of 16 comparisons; side by side, v1.16 was better in places. This version brings a new set of example pages (playbooks and SOPs, consulting-style pages, trees and networks, photo layouts), chooses each section's layout for what its reader must do, and checks that choice through to the finished page. Larger, more visual jobs are still to be tested.
+
 Problems that were found have been fixed and given automated tests, so they're less likely to come back. It isn't
 perfect, though: it's still worth reading the result before you share it.
 
